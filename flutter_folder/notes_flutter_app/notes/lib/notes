@@ -1,0 +1,108 @@
+// import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:firebase_core/firebase_core.dart';
+// import 'package:flutter/material.dart';
+// import 'package:notes/firebase_options.dart';
+
+// class Home extends StatefulWidget {
+//   const Home({super.key});
+
+//   @override
+//   State<Home> createState() => _HomeState();
+// }
+
+// class _HomeState extends State<Home> {
+//   late final TextEditingController _email;
+//   late final TextEditingController _password;
+
+//   void initState() {
+//     _email = TextEditingController();
+//     _password = TextEditingController();
+//     super.initState();
+//   }
+
+//   @override
+//   void dispose() {
+//     _email.dispose();
+//     _password.dispose();
+//     super.dispose();
+//   }
+
+//   @override
+//   @override
+//   Widget build(BuildContext context) {
+//     final size = MediaQuery.of(context).size;
+//     return Scaffold(
+//       body: FutureBuilder(
+//         future: Firebase.initializeApp(
+//           options: DefaultFirebaseOptions.currentPlatform,
+//         ),
+//         builder: (context, snapshot) {
+//           switch (snapshot.connectionState) {
+//             case ConnectionState.done:
+//               return Container(
+//                 padding: const EdgeInsets.all(10),
+//                 color: Colors.brown,
+//                 child: Column(
+//                   children: [
+//                     Container(
+//                       width: size.width * .85,
+//                       height: 500,
+//                       padding: const EdgeInsets.symmetric(
+//                           vertical: 20, horizontal: 10),
+//                       margin: const EdgeInsets.only(
+//                           bottom: 10, top: 20, left: 20, right: 20),
+//                       decoration: const BoxDecoration(
+//                           color: Colors.white,
+//                           borderRadius: BorderRadius.all(Radius.circular(21))),
+//                       child: Column(
+//                         children: [
+//                           TextField(
+//                             enableSuggestions: false,
+//                             autocorrect: false,
+//                             keyboardType: TextInputType.emailAddress,
+//                             controller: _email,
+//                             decoration: const InputDecoration(
+//                                 hintText: 'Enter Email here'),
+//                           ),
+//                           TextField(
+//                             obscureText: true,
+//                             enableSuggestions: false,
+//                             autocorrect: false,
+//                             controller: _password,
+//                             decoration: const InputDecoration(
+//                                 hintText: 'Enter Password here'),
+//                           ),
+//                           const SizedBox(
+//                             height: 20,
+//                           ),
+//                           TextButton(
+//                               onPressed: () async {
+//                                 await Firebase.initializeApp(
+//                                   options:
+//                                       DefaultFirebaseOptions.currentPlatform,
+//                                 );
+
+//                                 final email = _email.text;
+//                                 final password = _password.text;
+
+//                                 final userCredentials = await FirebaseAuth
+//                                     .instance
+//                                     .createUserWithEmailAndPassword(
+//                                         email: email, password: password);
+//                                 print(userCredentials);
+//                               },
+//                               child: const Text('Register'))
+//                         ],
+//                       ),
+//                     )
+//                   ],
+//                 ),
+//               );
+//             default:
+//               return const Text('Loading...');
+//           }
+//         },
+//       ),
+//     );
+//   }
+// }
