@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "C:/Users/tafad/Desktop/all_projects/flutter_folder/notes_flutter_app/notes/build/windows/x64/extracted/firebase_cpp_sdk_windows"
+    "cmake.sourceDirectory": "C:/Users/tafad/Desktop/all_projects/flutter_folder/notes_flutter_app/notes/windows",
+    "java.configuration.updateBuildConfiguration": "automatic"
 }

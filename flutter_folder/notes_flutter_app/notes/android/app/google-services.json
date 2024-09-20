@@ -1,0 +1,32 @@
+
+
+{
+  "project_info": {
+    "project_number": "987565330808",
+    "firebase_url": "https://my-first-flutter-app-firebase-default-rtdb.firebaseio.com",
+    "project_id": "my-first-flutter-app-firebase",
+    "storage_bucket": "my-first-flutter-app-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987565330808:android:9afe82fb639491df23788d",
+        "android_client_info": {
+          "package_name": "com.huawei.notes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhkSRvO9WYIV_vo2fiqhKfDfFnFiscsgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
