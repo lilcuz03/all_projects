@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name</title>
+</head>
+<body>
+    <div class="content"></div>
+    <script>
+    let list =[2,4,6,7];
+    
+     let todoListHTML ='';
+
+    for (let i = 0 ; i< list.length ; i++){
+     let  name = list[i];
+     let html =`<p> ${name}</p>` ;
+     todoListHTML+= html ;
+        
+;
+    }
+let Content =document.querySelector('.content');
+    Content.innerHTML=todoListHTML;
+    
+
+
+console.log(todoListHTML);
+    
+        
+    </script>
+    
+</body>
+</html>

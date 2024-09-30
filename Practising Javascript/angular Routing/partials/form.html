@@ -1,0 +1,15 @@
+<div class="jumbotron" ng-controller="myController as adder">
+    <h1>This is my Form Page</h1>
+    <label for="name">Name</label>
+    <input type="text" placeholder="Item name" ng-model="adder.name">
+    <label for="city">City</label>
+    <input type="text" placeholder="City" ng-model="adder.city">
+    <button ng-click="adder.addItems()">Click Me</button>
+    <hr>
+    <h2>Adder items Appear here</h2>
+    <ol>
+        <li ng-repeat="item in adder.items">
+            <b>{{item.Name}}</b> from the city of <b>{{item.City}}</b>
+        </li>
+    </ol>
+</div>

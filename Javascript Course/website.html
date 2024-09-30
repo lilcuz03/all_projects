@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Page</title>
+    <link rel="stylesheet" href="style01.css">
+</head>
+<body> 
+    <div class="form">
+        <form>
+
+    <div class="username">
+        <lable>Enter your username
+                <input type="text" id="username">
+                <p id="usernameFeedback"></p>
+        </lable>
+    </div>
+
+    <div class="email">
+        <lable>Enter Email
+                <input type="text" id="email"/>
+                <p id="emailFeedback"></p>
+        </lable>
+    </div>
+    
+    <div class="age">
+        <lable for="age">
+             Insert age
+            <input type="number" id="age"/> 
+        </lable>
+        <p id="age_feedback"></p>
+    </div>
+
+    <div class="password">
+        <lable>Type password
+                <input type="password" id="password"/>
+                <p id="passwordFeedback"></p>
+        </lable>
+    </div>
+
+    <div class="password">
+        <lable>Re-type password
+                <input type="password" id="password1"/>
+                <p id="passwordFeedback1"></p>
+        </lable>
+    </div>
+   
+    
+        </form>
+    </div>
+        <button type="button" onclick=" formValidation()";>submit</button>
+        <hr>
+        <h2> Results</h2>
+
+        <div id="container"></div>
+                
+    
+    
+    <script>
+
+        function formValidation(){
+            let usernameInput= document.getElementById("username");
+            let ageInput=document.getElementById("age");
+            let passwordInput=document.getElementById("password");
+            let emailInput=document.getElementById("email");
+            let password1Input=document.getElementById("password1");
+
+
+            if( usernameInput.value===''){
+            message='pls fill in username';
+
+        } else{
+            message='username is provided';
+        
+        }let usernameFeedback=document.getElementById("usernameFeedback");
+        usernameFeedback.textContent=message;
+    
+
+
+         if(ageInput.value===''){
+            message='pls insert your age'; 
+                    
+            }else if(ageInput.value>=18){
+                message='you are an adult';
+            } else if(ageInput.value<18){
+                message='you are a minor';
+            }
+           
+           let age_feedback=document.getElementById("age_feedback");
+           age_feedback.textContent=message;
+          
+        
+            
+
+            if(passwordInput.value===''){
+               message='pls enter password';
+            } else if (passwordInput.value==='Horizontal'){
+                message='correct password.'; 
+        }else {
+                message='you have entered wrong password';
+        }
+        let passwordFeedback=document.getElementById("passwordFeedback");
+        passwordFeedback.textContent=message;
+
+
+
+        if(emailInput.value===''){
+            message='pls fill out email';
+        } else {
+            message= 'email is  provided';
+        }
+        let emailFeedback=document.getElementById("emailFeedback");
+        emailFeedback.textContent=message;
+
+            if(password1Input.value===passwordInput.value){
+                message='password match';
+            } else if(
+                password1Input.value===''){
+                    message='Re-type your password';
+             
+             }else{
+                message='password do not match';
+            }
+            let passwordFeedback1=document.getElementById("passwordFeedback1");
+            passwordFeedback1.textContent=message;
+
+
+            
+        };
+        
+
+    </script>
+</body>
+</html>

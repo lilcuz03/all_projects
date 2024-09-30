@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking Progress</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="div-content">
+        <h1>Progress</h1>
+        <div class="buttons">
+            <button id="rock" class="move-button" onclick="button('Rock')" ><img class="move-icon" src="images/rock.png"/></button>
+            
+            <button id="paper" class="move-button" onclick="button('Paper')"><img class="move-icon" src="images/paper.png"></button>
+            
+            <button id="scissors" class="move-button" onclick="button('Scissors')"><img class="move-icon" src="images/scissors.png"></button>
+           
+        </div>
+        
+            
+
+        <div id="results" class="result">
+
+        </div>
+        <div id="totScore">
+
+        </div>
+    </div>
+    <p id="js-score" class="score"></p>
+
+ <button id="reset" class="reset"
+ onclick="
+            score.Win=0;
+            score.Lose=0;
+            Score.Draw=0;
+            localStorage.removeItem('score');
+            button();">Reset</button>
+        
+    <script>
+        let score=JSON.parse(localStorage.getItem('score')) ||{
+            Win: 0,
+            Draw: 0,
+            Lose: 0
+        };
+        
+        if(score){
+            score = {
+                Win: 0,
+                Draw: 0,
+                Lose: 0
+            };
+        }
+
+    
+    
+   
+        function button(playerChoice){
+    
+            let Rock =document.getElementById("rock");
+            let Paper =document.getElementById("paper");
+            let Scissors =document.getElementById("scissors");
+            let Reset =document.getElementById("reset");
+        
+
+            let computerMove = Math.random();
+
+            if(computerMove>0 && computerMove< 1/3){
+                computerMove ='Rock';
+            }else if(computerMove>1/3 && computerMove< 2/3){
+                computerMove ='Paper';
+            }else{
+                computerMove='Scissors';
+            };
+
+             
+
+            if(playerChoice===computerMove){
+                message='Draw'
+            }else if ((playerChoice==='Rock' && computerMove==='Paper') ||(playerChoice==='Paper' && computerMove==='Scissors')||(playerChoice==='Scissors' && computerMove==='Rock')){
+                message='Lose'
+            } else{
+                message ='Win';
+            }
+
+            if(message==='Win'){
+                score.Win +=1;
+            } else if(message==='Draw'){
+                score.Draw +=1;
+            } else if(message==='Lose'){
+                score.Lose +=1;
+            }
+
+            localStorage.setItem('score',JSON.stringify(score));
+
+
+
+            let results = document.getElementById("results");
+        results.textContent=`
+        you picked: ${playerChoice}
+        computer picked: ${computerMove} 
+        result is ,you :${message}
+        `;
+
+        
+
+          let totalScore=document.getElementById("totScore");
+        totalScore.textContent = `win: ${ score.Win}  Lose:${score.Lose}  Draw: ${score.Draw}` 
+
+        };
+
+        function restart(){
+
+        }
+
+    </script>
+    
+</body>
+</html>

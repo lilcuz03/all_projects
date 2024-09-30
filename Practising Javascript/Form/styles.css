@@ -1,0 +1,114 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: grey;
+    color: white;
+}
+.div-lable{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.submit-button{
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+#submit{
+    background-color: white;
+    color:black;
+    font-weight:bold;
+    width: 100px;
+    height: 30px;
+    border:none;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline-color: aqua;
+}
+
+input{
+    width:200px;
+    height:30px;
+    background-color: white;
+    border:none;
+    color:black;
+    text-align: center;
+    border-radius: 15px;
+    outline-color: aqua;
+    font-size: 18px;
+}
+input::placeholder{
+    color:rgb(123, 119, 119);
+    text-align: center;
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.row{
+    border: none;
+   text-align: center;
+}
+.username-error-message{
+    color:red;
+}
+.username-message{
+    color:aqua;
+}
+h2{
+    text-align: center;
+
+}
+.alert{
+    height: 30px;
+    width: 30px;
+    padding-top:10px;
+    margin-left: 10px;
+}
+.hearderContent{
+   display:none; 
+
+}
+ul{
+    display:flex;
+    text-decoration: none;
+    list-style-type : none;
+    cursor: pointer;
+}
+li{
+    padding:20px;
+    height: 100px;
+}
+li:hover{
+    color:aqua;
+}
+a{
+    text-decoration: none;
+}
+.hearderContent{
+    background-color: aqua;
+}
+.searchButton{
+    background-color:white;
+    outline: black;
+    width: 200px;
+    border-radius:3px;
+    /* margin-left: 200px; */
+}
+a:hover{
+    color:aqua;
+}
+.image-logo{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin-left: none;
+}
+.hearderContent{
+    display:flex;
+}
+.column1{
+    width: 50%;
+    float: left;
+}
+column2{
+    width:50%;
+    float:right;
+}
+

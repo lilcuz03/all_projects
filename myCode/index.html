@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task Manager</title>
+
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	
+	<header>
+		<h1>Task Manager</h1>
+        <div class="line"><hr/></div><!--creates a horizontal line-->
+		<form id="myForm">
+			<input 
+				type="text" 
+				name="task-input" 
+				id="task-input" 
+				placeholder="Create A Task" 
+                />
+			<input 
+				type="submit"
+				id="task-submit" 
+				value="Add task" 
+                />
+		</form>
+	</header>
+	<main>
+		<section class="task-list">
+			<h2>Task-List</h2>
+           <ol> 
+                <li>
+                    <div id="tasks">
+			        </div>
+                </li>
+            </ol>
+        
+		</section>
+	</main>
+    <footer><p>New Future pty (LTD) </p></footer>
+
+	<script src="index.js"></script>
+</body>
+</html>

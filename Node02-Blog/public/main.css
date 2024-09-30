@@ -1,0 +1,140 @@
+body{
+    background-color: black;
+    min-height: 500px;
+    
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+nav{
+    padding-top: 30px;
+    
+}
+#nav-a{
+    text-decoration: none;
+    color:crimson;
+    border: none;
+    text-align: center;
+    padding-top: 10px;
+    width: 100px;
+}
+#nav-a:hover{
+    color:aqua;
+    background-color: rgb(138, 2, 77);
+    border-radius: 10px;
+    
+}
+.icon-container{
+    margin-left: 50px;
+}
+.nav-h1{
+    color: rgb(210, 8, 49);
+}
+.nav-h1:hover{
+    font-size: 30px;
+    font-weight: bold;
+}
+.index-h1{
+    color: aqua;
+}
+.home-hr{
+    border: 5px solid crimson;
+}
+.h1-404{
+    margin-top: 20%;
+    margin-bottom: 20%;
+    font-size: 60px;
+    color: crimson;
+    font-weight: bolder;
+}
+.title-input{
+    width: 500px;
+    height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.snippet-input{
+    width: 500px;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.body-input{
+    width: 500px;
+    min-height: 200px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+   text-align: start;
+}
+h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: coral;
+}
+.body-input:hover{
+    background-color: black;
+    color: coral;
+    font-size: 20px;
+    border: 4px solid aqua;
+}
+.title-input:hover{
+    background-color: black;
+    color: coral;
+    font-size: 20px;
+    border: 4px solid aqua;
+}
+.snippet-input:hover{
+    background-color: black;
+    color: coral;
+    font-size: 20px;
+    border: 4px solid aqua;
+}
+.button-submit{
+    margin-left: 80%;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: crimson;
+    color: black;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.button-submit:hover{
+    background-color: aqua;
+    color: black;
+}
+.div-bar{
+    width: 20px;
+    background-color: crimson;
+    border-radius: 10px;
+}
+.blog-content{
+    margin: 40px;
+}
+.blog-title{
+    /* margin-left: 30px; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:crimson
+}
+.blog-title:hover{
+    color: aqua;
+}
+a{
+    text-decoration: none;
+}
+.delete{
+    color: coral
+}
+.delete:hover{
+color: red;
+cursor: pointer;
+}

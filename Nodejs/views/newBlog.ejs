@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <div class="blog-inputs">
+        <%- include('./partials/navBar.ejs') %>
+        <h1>
+            New Blog
+        </h1>
+        <hr />
+        <form class="form">
+            <div class="input-container">
+                <label for="title" class="label">Title</label>
+            <input type="text" placeholder="Title" name="title" class="title-input">
+            </div>
+            
+            <div class="input-container">
+                <label for="snippet" class="label">Snippet</label>
+            <input type="text" placeholder="Snippet" name="title" class="snippet-input">
+            </div>
+            
+            <div class="input-container1">
+                <label for="body" class="label">Body</label>
+            <!-- <input type="text" placeholder="body" name="body" class="body-input"> -->
+            <textarea type="text" name="body" class="body-input">
+                your body goes here
+            </textarea>
+            </div>
+
+            <button class="btn">Submit</button>
+            
+        </form>
+
+        <%- include('./partials/Footer.ejs') %>
+    </div>
+    
+</body>
+</html>

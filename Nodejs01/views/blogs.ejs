@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <div class="home-div">
+        <h1>Blogs Page Here</h1>
+        <hr />
+
+        <div class="blogs-div row mx-3 ">
+            <% blogs.forEach((blog)=>{%>
+                <div class="col-6 my-3 border border-light bg-danger">
+                    <a href="/details/<%=blog._id%>">
+                    <h2 class="text-warning text-center">
+                        <%=blog.title %>
+                    </h2>
+                    <hr />
+                    <p>
+                        <%= blog.snippet %>
+                    </p>
+                    </a>
+                </div>
+
+            <%})%>
+        </div>
+        <%- include('./partials/footer.ejs') %>
+    </div>
+</body>
+</html>

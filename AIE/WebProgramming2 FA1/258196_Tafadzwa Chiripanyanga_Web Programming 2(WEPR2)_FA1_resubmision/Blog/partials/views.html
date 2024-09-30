@@ -1,0 +1,21 @@
+<!-- views.html -->
+<div class="jumbotron" ng-controller="showBlogController as show">
+    <h2 class="text-center text-dark">Sample Data</h2>
+    <ol class="text-success text-center">
+        <li ng-repeat="blog in show.blogPosts" class="p-3">
+            <span class="text-dark">
+               <b>Title</b> :<a ng-href="/views">{{blog.Title}}</a>  
+            </span>
+            <br>
+            <span class="text-dark">
+               <b>Content</b>  :{{blog.Content}}
+            </span>
+            <br>
+            <span class="text-dark">
+                <b>Date</b> :{{blog.Date}}
+            </span>
+        </li>
+        <hr>
+    </ol>
+
+</div>

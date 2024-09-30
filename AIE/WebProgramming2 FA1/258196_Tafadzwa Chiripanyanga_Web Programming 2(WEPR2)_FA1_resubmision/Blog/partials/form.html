@@ -1,0 +1,19 @@
+<!-- form.html -->
+<div class="jumbotron" ng-controller="addBlogController as adder">
+    <h2 class="text-center text-dark">Form Page</h2>
+    <form>
+        <div class="row">
+            <div class="text-center col-3">
+                <input type="text" ng-model="adder.postTitle" placeholder="Title" class="p-4">
+            </div>
+            <div class="text-center col-3">
+                <textarea type="text" ng-model="adder.postContent" placeholder="Content" class="p-3"></textarea>
+            </div>
+            <div class="text-center col-3">
+                <input type="datetime-local" ng-model="adder.postDate" class="p-4">
+            </div>
+            <button ng-click="adder.addBlog()">Add Post</button>
+        </div>
+    </form>
+</div>
+

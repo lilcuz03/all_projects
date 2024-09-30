@@ -1,0 +1,61 @@
+<div class ="page-header row">
+   <!-- <h1><img src="http://placeholder.it/50x50" class="img-circle">Declan Proud</h1>-->
+    <div gravatar email="{{contact.email}}" size="50" class="img-circle"> 
+    </div>
+
+</div>
+
+
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <lable for="name" class="col-sm-4 control-lable">Name</lable>
+                <div class="col-sm-8">
+                    <p class="form-control-static" editbale="contact.name" field-type="text" ></p>
+                </div>
+            </div>
+        </div>
+
+
+                <div class="form-group">
+                    <lable for="name" class="col-sm-4 control-lable">Phone</lable>
+                    <div class="col-sm-8">
+                        <p class="form-control-static">0123456</p>
+                    </div>
+                </div>
+
+
+                    <div class="form-group">
+                        <lable for="name" class="col-sm-4 control-lable" ng-bind-html = "contact.address | paragraph">Address</lable>
+                        <div class="col-sm-8">
+                            <p class="form-control-static" ng-bind-html ="contact.address | paragraph">123,some  street> 
+
+                            </p>
+                            <div class="form-group">
+                                <lable for="email" class="col-sm-4 control-lable">declan@gmail.com</lable>
+                                <div class="col-sm-8">
+                                    <p class="form-control-static">Declan Proud</p>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <lable for="website" class="col-sm-4 control-lable">Website</lable>
+                                    <div class="col-sm-8">
+                                        <p class="form-control-static">Declan Proud</p>
+                                    </div>
+
+                        </div>
+
+            </div>
+
+        </div>
+        <div class="col-sm-6">
+            
+        </div>
+    </div>
+</div>
+
+
+

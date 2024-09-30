@@ -1,0 +1,88 @@
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.blog-inputs{
+    width: 1300px;
+    margin-left: 150px;
+    margin-top: 50px;
+    margin-right: 50px;
+    border: 5px solid aqua;
+    padding: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black;
+    border-radius: 20px;
+}
+hr{
+    border: 5px solid crimson;
+    border-radius: 10px;
+}
+.form{
+    margin-left: 150px;
+    
+}
+.title-input{
+    width: 500px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 60px;
+    border: none;
+    margin-bottom: 40px;
+    border-radius:10px;
+    
+}
+.snippet-input{
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    border: none;
+    padding: 10px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    border-radius:10px;
+    
+}
+.body-input{
+    width: 500px;
+    height: 200px;
+    border: none;
+    padding: 10px;
+    margin-left: 60px;
+    margin-bottom: 40px;
+    border-radius:10px;
+    
+}
+.label{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: crimson;
+}
+.input-container1{
+    display: flex;
+}
+.body-input:hover{
+    outline: 3px solid crimson;
+    background-color: black;
+}
+.snippet-input:hover{
+    outline: 3px solid crimson;
+    background-color: black;
+}
+.title-input:hover{
+    outline: 3px solid crimson;
+    background-color: black;
+}
+.btn{
+    margin-left: 300px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: none;
+    background-color: crimson;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn:hover{
+    color: crimson;
+    background-color: black;
+    
+}

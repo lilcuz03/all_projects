@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin flip</title>
+</head>
+<body>
+    <h1>COIN FLIP</h1>
+    <button id="heads" onclick="coinFlip('heads');">Heads</button>
+    <button id="tails" onclick="coinFlip('tails')">Tails</button>
+    <p id="results"></p>
+    <p id="scoreSheet"></p>
+
+
+    <script>
+        let score ={
+            Win:0,
+            Lose:0,
+            Draw:0
+        }
+
+        function coinFlip(playerChoice){
+        let heads =document.getElementById("heads");
+        let tails =document.getElementById("tails");
+        
+        
+
+        let computerMove = Math.random();
+
+        if(computerMove>0 && computerMove<1/2){
+            guess = 'heads';
+        } else{
+            guess ='tails';
+        }
+
+        if(guess===playerChoice){
+            message='Draw';
+        } else if (guess==='heads'&& playerChoice==='tails'){
+            message='Lose'
+        }else{
+            message='Win';
+        }
+
+        if(message==='Win'){
+            score.Win +=1;
+        }else if( message ==='Lose'){
+            score.Lose +=1;
+        } else if(message ==='Draw'){
+            score.Draw +=1;
+        }
+
+        let results = document.getElementById("results");
+        results.textContent=`computer picked:${guess} and you picked:${playerChoice} , the result is ${message}`;
+
+        let scoreSheet=document.getElementById("scoreSheet");
+        scoreSheet.textContent = `Win:${score.Win},Draw:${score.Draw},Lose:${score.Lose}`;
+    }
+
+
+
+
+
+
+
+
+        /*
+        let coinFlip = Math.random();
+        
+        let result = '';
+
+        let guess = 'heads' ;
+
+        coinFlip> 0 && coinFlip < 1/2 ? result='heads' : result='tails';
+        guess=== result? alert('you won!') : alert('you lose!');
+        /*    result ='heads';
+        } else {
+            result = 'tails';
+        }
+
+        if (guess === result){
+            alert('you won!');
+        } else{
+            alert('you lose!');
+        }
+        
+        console.log(result ,);
+        */
+
+    </script>
+    
+</body>
+</html>
