@@ -1,0 +1,111 @@
+List<Map<String, dynamic>> productList = [
+  {
+    'id': 1,
+    'name': 'Wireless Headphones',
+    'category': 'Electronics',
+    'price': 99.99,
+    'stock': 25,
+    'rating': 4.5,
+    'onSale': true,
+    'imageUrl':
+        'https://www.bhphotovideo.com/images/images2500x2500/skullcandy_s6hbgy_374_hesh_2_bluetooth_headphones_1085703.jpg',
+  },
+  {
+    'id': 2,
+    'name': 'Gaming Laptop',
+    'category': 'Electronics',
+    'price': 1499.99,
+    'stock': 8,
+    'rating': 4.8,
+    'onSale': false,
+    'imageUrl':
+        'https://tse1.mm.bing.net/th?id=OIP.azrV2OZfj3ANdA9z4VcWCgHaFM&pid=Api&P=0&h=220',
+  },
+  {
+    'id': 3,
+    'name': 'Yoga Mat',
+    'category': 'Fitness',
+    'price': 19.99,
+    'stock': 100,
+    'rating': 4.3,
+    'onSale': true,
+    'imageUrl':
+        'https://www.protekgr.com/wp-content/uploads/2015/02/0.25-Purpul.jpg',
+  },
+  {
+    'id': 4,
+    'name': 'Running Shoes',
+    'category': 'Footwear',
+    'price': 59.99,
+    'stock': 50,
+    'rating': 4.1,
+    'onSale': false,
+    'imageUrl':
+        'https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1560371356-on-cloud-waterproof-0926-1540406991.jpg?crop=0.806xw:0.680xh;0.106xw,0.269xh',
+  },
+  {
+    'id': 5,
+    'name': 'Smart Watch',
+    'category': 'Accessories',
+    'price': 199.99,
+    'stock': 15,
+    'rating': 4.7,
+    'onSale': true,
+    'imageUrl':
+        'https://skingroom.com/wp-content/uploads/2020/04/Samsung-Galaxy-Smartwatch.jpg',
+  },
+  {
+    'id': 6,
+    'name': 'Leather Wallet',
+    'category': 'Accessories',
+    'price': 49.99,
+    'stock': 30,
+    'rating': 4.2,
+    'onSale': true,
+    'imageUrl':
+        'https://joojoobs.com/wp-content/uploads/2015/07/Mens-Leather-Wallet-with-Coin-Pocket-003-02.jpg',
+  },
+  {
+    'id': 7,
+    'name': 'Blender',
+    'category': 'Home Appliances',
+    'price': 89.99,
+    'stock': 40,
+    'rating': 4.6,
+    'onSale': true,
+    'imageUrl':
+        'https://topkitchenking.com/wp-content/uploads/2020/05/NutriBullet-ZNBF30500Z-Blender-Combo-1200-Watt-1200W-Dark-Gray-1024x814.jpg',
+  },
+  {
+    'id': 8,
+    'name': 'Electric Kettle',
+    'category': 'Home Appliances',
+    'price': 39.99,
+    'stock': 50,
+    'rating': 4.5,
+    'onSale': false,
+    'imageUrl':
+        'https://i5.walmartimages.com/asr/5c847915-ab0d-48a1-b9ab-f495a46e9810_1.c1cc2537e9bcb539fb8ff72910305c28.jpeg',
+  },
+  {
+    'id': 9,
+    'name': 'Office Chair',
+    'category': 'Furniture',
+    'price': 129.99,
+    'stock': 12,
+    'rating': 4.7,
+    'onSale': true,
+    'imageUrl': 'https://img.ofo.co.uk/media/img/shop/srcpd/069895.jpg',
+  },
+  {
+    'id': 10,
+    'name': 'LED Desk Lamp',
+    'category': 'Furniture',
+    'price': 29.99,
+    'stock': 60,
+    'rating': 4.3,
+    'onSale': true,
+    'imageUrl':
+        'https://image.lampsplus.com/is/image/cropped/60E40cropped.fpx?qlt=65&wid=1296&hei=1296&op_sharpen=1&fmt=jpeg',
+  },
+];

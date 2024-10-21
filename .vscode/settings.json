@@ -1,0 +1,22 @@
+{
+    "cmake.sourceDirectory": "C:/Users/tafad/Desktop/all_projects/flutter_folder/Learning Bloc/bloc_practise/windows",
+    "netbeans.jdkhome": "c:\\Program Files\\jdk-22.0.2",
+    "netbeans.project.jdkhome": "c:\\Program Files\\jdk-22.0.2",
+    "java.jdt.ls.java.home": "c:\\Program Files\\jdk-22.0.2",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-22",
+            "path": "c:\\Program Files\\jdk-22.0.2"
+        }
+    ],
+    "terminal.integrated.env.windows": {
+        "JAVA_HOME": "c:\\Program Files\\jdk-22.0.2",
+        "PATH": "c:\\Program Files\\jdk-22.0.2\\bin;${env:PATH}"
+    },
+    "maven.terminal.customEnv": [
+        {
+            "environmentVariable": "JAVA_HOME",
+            "value": "c:\\Program Files\\jdk-22.0.2"
+        }
+    ]
+}
