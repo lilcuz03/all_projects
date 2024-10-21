@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angular Practice</title>
+  <script src="/lib/angular.min.js"></script>
+  <script src="/lib/angular-route.min.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+  <header ng-include="'header.html'"></header>
+  <!-- <div class="jumbotron">
+    <div ng-controller="addController as adder">
+      <form>
+          <input type="text" ng-model="adder.name" placeholder="Name">
+          <input type="text" ng-model="adder.city" placeholder="City">
+          <button ng-click="adder.addItems()">Add To List</button>
+      </form>
+    </div> -->
+    <!-- <hr>
+    <div ng-controller="showController as show">
+      <input type="text" ng-model="search" placeholder="type to search">
+      <button ng-click="oder='Name'">Oder by Name</button>
+      <button ng-click="oder='City'">Order by City</button>
+      <ol>
+        <li ng-repeat="item in show.items|orderBy:oder|filter:search">
+          <b>{{item.Name}}</b> from the city of <b>{{item.City}}</b>
+            <button ng-click="show.removeItem($index)">remove</button>
+          </p>
+        </li>
+      </ol>
+    </div>
+  </div> -->
+  <div ng-view></div>
+</body>
+</html>
+  

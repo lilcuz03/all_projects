@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs')%>
+<body>
+    
+    <div class="form">
+        <h1>New Blog</h1>
+        <hr />
+        <form action="/form" method="post">
+        <div class="input-div">
+            <label for="title">Title</label>
+            <input type="text" name="title" placeholder="Title" class="title-input" required>
+        </div>
+        <div class="input-div">
+            <label for="snippet" class="snippet-label">Snippet</label>
+            <input type="text" name="snippet" placeholder="Snippet" class="snippet-input" required>
+        </div>
+        <div class="input-div">
+            <label for="body">Body</label>
+            <textarea name="body" id="body-input" class="body-input" required>your body gose here</textarea>
+        </div>
+        <div class="btn -div">
+            <button class="btn">
+                Submit
+            </button>
+        </div>
+        </form>
+    </div>
+    <%- include('./partials/footer.ejs')%>
+</body>
+</html>

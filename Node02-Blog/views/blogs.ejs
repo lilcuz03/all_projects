@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <div class="row">
+            <h1 class="text-center index-h1">
+                Blogs
+            </h1>
+            <hr class="home-hr"/>
+            
+            <% blogs.forEach((blog)=>{ %>
+                <div class="blog-content row">
+                    <div class="div-bar col-3">
+
+                    </div>
+                    <div class="blog-text col-8">
+                            <a href="/details/<%=blog._id %>">
+                                    <h2 class="blog-title">
+                                        <%=blog.title %>
+                                    </h2>
+                            </a>
+                        <p>
+                            <%= blog.snippet%>
+                        </p>
+                    </div>
+                </div>
+
+            <%})%>
+
+          
+        
+        
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Routing</title>
+    <script src="/lib/angular.min.js"></script>
+    <script src="/lib/angular-route.min.js"></script>
+    <link rel="stylesheet" href="/styles/bootstrap.css">
+    <!-- <script src="/styles/bootstrap.min.js"></script> -->
+    <script src="app.js"></script>
+</head>
+<body>
+   <header ng-include="'partials/header.html'"></header>
+   <main ng-view></main> 
+</body>
+</html>

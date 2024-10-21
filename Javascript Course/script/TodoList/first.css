@@ -1,0 +1,76 @@
+body{
+    background-color: rgb(60, 58, 58);
+}
+.pageContent{
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 30%;
+
+    
+}
+    .htmlButton{
+        background-color: rgb(171, 68, 68);
+        margin-left: 30px;
+    }
+    .column{
+        float:left;
+        width:33.33%;
+    }
+    .row:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+    .userInput{
+        border :none;
+        height: 30px;
+        outline: none;
+        border-radius: 5px;
+        font-size: 16px;
+        color: grey;
+        text-align: center;
+
+    }
+    .date-input{
+        border :none;
+        height: 30px;
+        outline: none;
+        border-radius: 5px;
+        font-size: 16px;
+        color: grey;
+        text-align: center;
+
+    }
+    .addButton{
+        border :none;
+        height: 30px;
+        outline: none;
+        border-radius: 5px;
+        font-size: 16px;
+        color: grey;
+        text-align: center;
+
+    }
+    .htmlButton{
+        border :none;
+        height: 30px;
+        outline: none;
+        border-radius: 5px;
+        font-size: 16px;
+        color: grey;
+        text-align: center;
+
+    }
+    .row{
+        font-size: 30px;
+        color:aqua ;
+    }
+    h1{
+        text-align: center;
+        color:aqua;
+    }
+    .dateElement{
+        color:coral;
+    }
+
+

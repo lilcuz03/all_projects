@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+    <div class="headerContent">
+            <div class="column1"> <img class="image-logo"  src="pic.jpg">
+            </div> 
+            <div class="column2">     
+            <ul>
+            
+            <li>
+                Home
+            </li>
+            <li>
+                About us
+            </li>
+            <li>
+             <a href="contact.html">Contact us </a>   
+            </li>
+            <li>
+                <input type="search" class="searchButton" placeholder="Search">
+            </li>
+        </ul>
+        </div>
+    </div>
+</header>
+<body>
+    
+    <h2 id="h2">Sign Up </h2>
+    <!-- <div class="row">
+        <div class="column"><img src="images/naruto3.jpeg"></p>
+    </div> -->
+    
+    <div class="row">
+        <div class="column">
+            <div class="div-lable"><lable for="username">UserName</lable></div>
+            <input class="input-name" placeholder="Enter your username">
+            <div class="username-error-message"></div>
+            <div class= "username-message"></div>
+        </div>
+        <div class="column">
+            <div class="div-lable">
+            <lable for="Email">Email</lable>
+            </div>
+            <input type="email" id="input-email" placeholder="Enter your email Address">
+            <div class="email-message"></div>
+        </div>
+        <div class="column">
+            <div class="div-lable">
+                 <lable for="tel">Telephone</lable>
+            </div>
+            <input type="tel" id="input-tel" placeholder="Enter your phone number" />
+            <div class="tel-message"></div>
+        </div>
+        <div class="column">
+            <div class="div-lable">
+            <lable for="password">Password</lable>
+            </div>
+            <input type="password" id="input-password" placeholder="Enter your password">
+            <div class="password-message"></div>
+        <div class="column">
+            <div class="div-lable">
+            <lable for="password">Password</lable>
+            </div>
+            <input type="password" id="input-password1" placeholder="Please re-enter Your password">
+            <div class="password1-message"></div>
+        </div>
+    </div>
+    <!-- <div class="row"><div class="column"><img src="images/naruto2.jpeg"></div>
+        </div> -->
+
+
+    <div class="submit-button">
+        <button id="submit" onclick="">Submit</button>
+    </div>
+<div class="results"></div>
+    <script src="index.js"></script>
+</body>
+</html>

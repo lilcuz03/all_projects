@@ -1,0 +1,473 @@
+/*
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:notes/auth/login_view.dart';
+import 'package:notes/auth/register_view.dart';
+import 'package:notes/constance/routes.dart';
+import 'package:notes/firebase_options.dart';
+import 'package:notes/home/home.dart';
+import 'package:notes/views/home_view.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    routes: {
+      indexRoute: (context) => const Home(),
+      homeRoute: (context) => const HomeView(),
+      loginRoute: (context) => const LoginView(),
+      registerRoute: (context) => const RegisterView(),
+    },
+  ));
+}
+*/
+
+/*
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'dart:developer' as devetools show log;
+
+import 'package:notes/constance/routes.dart';
+
+class LoginView extends StatefulWidget {
+  const LoginView({super.key});
+
+  @override
+  State<LoginView> createState() => _LoginViewState();
+}
+
+class _LoginViewState extends State<LoginView> {
+  late final TextEditingController _email;
+  late final TextEditingController _password;
+
+  @override
+  void initState() {
+    _email = TextEditingController();
+    _password = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _email.dispose();
+    _password.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 136, 167, 101),
+      body: Container(
+        // margin:
+        //     const EdgeInsets.only(top: 300, bottom: 300, left: 500, right: 200),
+        // padding:
+        //     const EdgeInsets.only(top: 40, bottom: 40, left: 40, right: 40),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              width: size.width * .33,
+              height: 700,
+              color: Colors.black,
+            ),
+            Container(
+              width: size.width * .33,
+              height: 700,
+              padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(21)),
+              child: Column(
+                children: [
+                  const Center(
+                    child: Text('Login'),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  TextField(
+                    controller: _email,
+                    decoration:
+                        const InputDecoration(hintText: 'Enter your Email'),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  TextField(
+                    controller: _password,
+                    decoration:
+                        const InputDecoration(hintText: 'Enter your password'),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      TextButton(
+                          onPressed: () async {
+                            final email = _email.text;
+                            final password = _password.text;
+                            try {
+                              await FirebaseAuth.instance
+                                  .signInWithEmailAndPassword(
+                                      email: email, password: password);
+                              Navigator.of(context).pushNamedAndRemoveUntil(
+                                homeRoute,
+                                (Route<dynamic> route) => false,
+                              );
+                            } catch (e) {
+                              devetools.log(e.toString());
+                            }
+                          },
+                          child: const Text('SignIn')),
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, registerRoute);
+                        },
+                        child: const Text('dont have an account ?'),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+            Container(
+              width: size.width * .33,
+              height: 700,
+              color: Colors.black,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+*/
+
+/*
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+
+class VarificationView extends StatefulWidget {
+  const VarificationView({super.key});
+
+  @override
+  State<VarificationView> createState() => _VarificationViewState();
+}
+
+class _VarificationViewState extends State<VarificationView> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 46, 78, 47),
+        title: const Text('Verify Email'),
+        centerTitle: true,
+      ),
+      backgroundColor: const Color.fromARGB(255, 102, 173, 105),
+      body: Column(children: [
+        Container(
+          padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+          child: Column(
+            children: [
+              const Center(
+                child: Text('Verify Your Email'),
+              ),
+              const SizedBox(height: 20),
+              TextButton(
+                  onPressed: () {
+                    final user = FirebaseAuth.instance.currentUser;
+                    if (user?.emailVerified == false) {
+                      user?.sendEmailVerification();
+                    } else {
+                      Navigator.pushNamed(context, 'homepage');
+                    }
+                  },
+                  child: const Text('Verify'))
+            ],
+          ),
+        )
+      ]),
+    );
+  }
+}
+
+*/
+
+/*
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:notes/constance/routes.dart';
+import 'package:notes/firebase_options.dart';
+import 'package:notes/loading/loading.dart';
+
+class RegisterView extends StatefulWidget {
+  const RegisterView({super.key});
+
+  @override
+  State<RegisterView> createState() => _RegisterViewState();
+}
+
+class _RegisterViewState extends State<RegisterView> {
+  late final TextEditingController _email;
+  late final TextEditingController _password;
+
+  @override
+  void initState() {
+    _email = TextEditingController();
+    _password = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _email.dispose();
+    _password.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    // try {} catch (e) {}
+    return FutureBuilder(
+      future: Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      ),
+      builder: (BuildContext context, AsyncSnapshot<FirebaseApp> snapshot) {
+        switch (snapshot.connectionState) {
+          case ConnectionState.done:
+            try {
+              return Scaffold(
+                backgroundColor: const Color.fromARGB(255, 136, 167, 101),
+                body: Container(
+                  // margin:
+                  //     const EdgeInsets.only(top: 300, bottom: 300, left: 500, right: 200),
+                  // padding:
+                  //     const EdgeInsets.only(top: 40, bottom: 40, left: 40, right: 40),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        width: size.width * .33,
+                        height: 700,
+                        color: Colors.black,
+                      ),
+                      Container(
+                        width: size.width * .33,
+                        height: 700,
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 30, horizontal: 30),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(21)),
+                        child: Column(
+                          children: [
+                            const Center(
+                              child: Text('Register'),
+                            ),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            TextField(
+                              controller: _email,
+                              decoration: const InputDecoration(
+                                  hintText: 'Enter your Email'),
+                            ),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            TextField(
+                              controller: _password,
+                              decoration: const InputDecoration(
+                                  hintText: 'Enter your password'),
+                            ),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                TextButton(
+                                    onPressed: () async {
+                                      final email = _email.text;
+                                      final password = _password.text;
+                                      await FirebaseAuth.instance
+                                          .createUserWithEmailAndPassword(
+                                              email: email, password: password);
+                                    },
+                                    child: const Text('Register')),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.pushNamed(context, loginRoute);
+                                  },
+                                  child: const Text('got an account ?'),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: size.width * .33,
+                        height: 700,
+                        color: Colors.black,
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            } catch (e) {}
+          default:
+            return const LoadingView();
+        }
+        return const Text('something went Wrong ');
+      },
+    );
+  }
+}
+
+*/
+
+/*
+// import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/widgets.dart';
+import 'package:notes/auth/login_view.dart';
+import 'package:notes/firebase_options.dart';
+import 'package:notes/loading/loading.dart';
+
+class Home extends StatefulWidget {
+  const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+      future: Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      ),
+      builder: (BuildContext context, AsyncSnapshot<FirebaseApp> snapshot) {
+        switch (snapshot.connectionState) {
+          case ConnectionState.done:
+            // final user = FirebaseAuth.instance.currentUser;
+            return const LoginView();
+
+          default:
+            return const LoadingView();
+        }
+      },
+    );
+  }
+}
+
+*/
+
+/*
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:notes/errors/something_went_wrong.dart';
+import 'package:notes/firebase_options.dart';
+import 'package:notes/loading/loading_view.dart';
+import 'package:notes/routes/routes.dart';
+
+class Home extends StatefulWidget {
+  const Home({super.key});
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+enum MenuAction { logout }
+
+Future<bool> showlogoutDialog(BuildContext context) {
+  return showDialog<bool>(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text('Log Out'),
+          content: const Text('Are you sure You want to logout ?'),
+          actions: [
+            TextButton(
+              onPressed: () async {
+                try {
+                  Navigator.of(context).pop(false);
+                } catch (e) {}
+                // final popDialog = await showlogoutDialog(context);
+              },
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () async {
+                try {
+                  Navigator.of(context).pop(true);
+                } catch (e) {}
+                // final popDialog = await showlogoutDialog(context);
+              },
+              child: const Text('Log-Out'),
+            )
+          ],
+        );
+      }).then((value) => value ?? false);
+}
+
+class _HomeState extends State<Home> {
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+      future: Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      ),
+      builder: (BuildContext context, AsyncSnapshot<FirebaseApp> snapshot) {
+        switch (snapshot.connectionState) {
+          case ConnectionState.done:
+            try {
+              return Scaffold(
+                appBar: AppBar(
+                  backgroundColor: const Color.fromARGB(255, 56, 113, 58),
+                  actions: [
+                    PopupMenuButton<MenuAction>(
+                      onSelected: (value) async {
+                        
+                        final islogedOut =await showlogoutDialog(context);
+                        if(islogedOut){
+                          Navigator.of(context).pushNamedAndRemoveUntil(loginRoute, (Route<dynamic> route) => false);
+                        }
+                      },
+                      itemBuilder: (context) {
+                        return const [
+                          PopupMenuItem<MenuAction>(
+                            value: MenuAction.logout,
+                            child: Text('Log Out'),
+                          )
+                        ];
+                      },
+                    )
+                  ],
+                ),
+              );
+            } catch (e) {}
+
+          default:
+            return const LoadingView();
+        }
+        return const SomethingWentWrong();
+      },
+    );
+  }
+}
+
+*/

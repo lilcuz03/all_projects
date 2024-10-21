@@ -1,0 +1,12 @@
+
+    <input type="text" ng-model="search" placeholder="type to search">
+    <button ng-click="oder='Name'">Oder by Name</button>
+    <button ng-click="oder='City'">Order by City</button>
+    <ol>
+      <li ng-repeat="item in show.items|orderBy:oder|filter:search">
+        <b>{{item.Name}}</b> from the city of <b>{{item.City}}</b>
+          <button ng-click="show.removeItem($index)">remove</button>
+        </p>
+      </li>
+    </ol>
+ 

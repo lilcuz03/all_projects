@@ -1,0 +1,78 @@
+body{
+    background-color: rgb(25, 25, 25);
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#subscribe{
+ border:none;
+ border-radius: 50px;
+ background-color: black;
+ color:white;
+ padding-top:10px;
+ padding-bottom: 10px;
+ padding-left: 15px;
+ padding-right: 15px;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ font-weight: bold;
+ cursor:pointer;
+}
+.is-subscribed{
+    background-color: rgb(243, 164, 164);
+    color:rgb(145, 132, 132);
+}
+#input{
+    padding-top:16px;
+    padding-bottom: 16px;
+    padding-left:16px ;
+    padding-right: 16px;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    font-size: 16px;
+    border:none;
+}
+#calculate{
+    background-color: green;
+    
+    padding-top:16px;
+    padding-bottom: 16px;
+    padding-left:16px ;
+    padding-right: 16px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+}
+.move-icon{
+  height:50px;  
+}
+.move-button{
+    
+    background-color: white;
+    border: 3px solid white;
+    width:100px;
+    height:100px;
+    border-radius: 60px;
+    margin-right:10px;
+    cursor: pointer;
+}
+.result{
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:aqua
+}
+.reset{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border:none;
+    border-radius: 16px;
+    background-color: aqua;
+    margin-left: 100px;
+}
+.score{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    
+
+}

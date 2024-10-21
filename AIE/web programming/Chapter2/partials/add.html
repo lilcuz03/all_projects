@@ -1,0 +1,66 @@
+<div class="page-header">
+    <h1>Add Contact</h1>
+</div>
+
+<form class="form-horizontal" ng-submit="submit()">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <lable for="name" class=" col-sm-4 control-lable">Name</lable>
+                <div class="col-sm-8">
+                <input type="text" id="name" class="form-control" ng-model ="contact.name">
+                </div>
+            </div>
+
+                <div class="form-group">
+                <lable for="phone" class="col-sm-4 control-lable">Phone Number</lable>
+                <div class="col-sm-8">
+                <input type="tel" id="phone" class="form-control">
+            </div>
+            </div>
+
+
+            <div class="form-group">
+                <lable for="Address" class=" col-sm-4 control-lable">Address </lable>
+                <div class="col-sm-8">
+                <textarea id="address" class=" col-sm-4 form-control"></textarea>
+                </div>
+            </div>
+
+        </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <lable for="email" class="col-sm-4 control-lable">Email</lable>
+                    <div class="col-sm-8">
+                    <input type="email" id="email" class="form-control">
+                    </div>
+                </div>
+
+                    <div class="form-group">
+                        <lable for="website" class=" col-sm-4 control-lable">Website</lable>
+                        <div class="col-sm-8">
+                        <input type="text" id="website" class="form-control">
+                        </div>
+                    </div>
+
+                        <div class="form-group">
+                            <lable for="notes" class=" col-sm-4 control-lable">Notes </lable>
+                            <div class="col-sm-8">
+                            <textarea id="notes" class="form-control"></textarea>
+                            <span class="help-block ">Additional Information</span>
+                        </div>
+                    </div>
+                
+            </div>
+            
+            </div>
+            <div class="form-group well">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="col-sm-8">
+                    <input type="submit" class="  col-sm-4 btn btn-primary" value="add contact">
+                    
+
+                </div>
+            </div>
+    </div>
+</form>

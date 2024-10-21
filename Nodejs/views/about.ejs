@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body class="bg-dark my-3 mx-3">
+    
+    <%- include('./partials/navBar.ejs') %>
+
+    <h1>
+        About Page Here 
+    </h1>
+    <h2>Wassup</h2>
+    <div class="row">
+        <div class="col-3 p-3"></div>
+
+        <div class="col-6 text-primary">
+
+    <% blogs.forEach(blog =>{ %>
+        <h2>
+            <%= blog.title %>
+        </h2>
+        <p>
+            <%= blog.snippet %>
+            <small>
+                <%= blog.body %>
+            </small>
+        </p>
+   <% }) %>
+
+        </div>
+
+   <%- include('./partials/Footer.ejs') %>
+
+   <div class="col-3"></div>
+
+    </div>
+</body>
+</html>

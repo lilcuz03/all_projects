@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <h2>Rock Paper Scissors</h2>
+    <button
+    onclick="myFunction('Rock')";>
+    Rock
+    </button>
+
+    <button
+    onclick="myFunction('Paper')";>
+    Paper
+    </button>
+
+    <button
+    onclick="myFunction('Scissors')";>
+    Scissors
+    </button>
+    <div id="results">
+
+    </div>
+
+    </div>
+    
+
+    <script>
+        function myFunction(playerChoice){
+
+            let computerMove = Math.random();
+            let message='';
+
+            if( computerMove>0 && computerMove< 1/3){
+                computerMove='Rock';
+            }else if ( computerMove>1/3 && computerMove< 2/3){
+                computerMove='Paper';
+        } else{
+                computerMove='Scissors';
+        }
+
+        if(playerChoice===computerMove){
+            message = 'Draw';
+
+        } else if( (playerChoice==='Rock'&& computerMove==='Scissors')||
+        (playerChoice==='Scissors'&& computerMove==='Paper')||
+        (playerChoice==='Paper' && computerMove ==='Rock') ) {
+            message='Win';
+            
+    }  else{
+        message='Lose';
+    }
+
+let results = document.getElementById("results");
+results.textContent =`you picked: ${playerChoice} \n computer Picked: ${computerMove}\n result:${message}`
+}
+
+
+    </script>
+    
+</body>
+</html>
